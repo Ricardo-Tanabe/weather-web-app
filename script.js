@@ -1,3 +1,17 @@
+import { motion, animate } from 'framer';
+
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('pt-BR', options).format(now);
+
+    document.getElementById('weekday').textContent = `${formattedDate}`;
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+}
+
 async function getWeather() {
     const location = 'SãoLuís,MA,Brasil';
     const date1 = '2025-01-15';
@@ -15,11 +29,13 @@ async function getWeather() {
         }
         const previousDay = data.days[0];
         const currentDay = data.days[1];
-        console.log(previousDay);
-        console.log(currentDay);
+        return [previousDay, currentDay];
     } catch(error) {
         console.error(error);
+        return [];
     }
 }
 
-getWeather();
+// getWeather();
+setInterval(updateClock, 1000);
+updateClock()

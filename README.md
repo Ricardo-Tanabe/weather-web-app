@@ -13,11 +13,9 @@ Link para o [Projeto Weather Web App](https://roadmap.sh/projects/weather-app)
 ## Ferramentas utilizadas no desenvolvimento
 
 - HTML
-- [Tailwind CSS](https://tailwindcss.com/): Framework
-- [Typescript](https://www.typescriptlang.org/)
-- [React](https://react.dev/)
-    - Framework: [Nextjs](https://nextjs.org/)
-    - Servidor: [Descrito abaixo](#getting-started)
+- CSS
+- Javascript
+- NPM
 - [VS Code Studio](https://code.visualstudio.com/)
 
 ## Observações

@@ -7,10 +7,44 @@
     <meta name="keywords" content="APIs de Terceiros, Weather Web App, Projeto" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="node_modules/weather-icons/css/weather-icons.css">
     <script src="dist/main.js" defer></script>
-    <title>Document</title>
+    <title>Weather Web App</title>
 </head>
 <body>
-    
+    <div id="app">
+        <div id="weather-nav">
+            <div class="logo">
+                <i class="wi wi-day-sunny"></i>
+            </div>
+        </div>
+        <div id="weather-search">
+            <input type="text" placeholder="Insira a localidade desejada">
+        </div>
+        <div id="weather-location">
+            <div class="country-location">
+                <span>São Luís</span>
+                <span>Maranhão</span>
+                <span>Brasil</span>
+            </div>
+            <div class="temperature-location">31º</div>
+            <div class="ilustration-location">Info</div>
+        </div>
+        <div id="weather-data">
+            <div id="date">
+                <div id="weekday"></div>
+                <div id="clock"></div>
+            </div>
+            <div id="temperature"><i class="wi wi-day-rain-mix"></i></div>
+            <div id="windspeed"><i class="wi wi-thermometer"></i></div>
+            <div id="precipProb"><i class="wi wi-strong-wind"></i></div>
+            <div id="conditions"><i class="wi wi-day-sunny"></i></div>
+            <!-- <div id="clock"><i class="wi wi-day-hail"></i></div>
+            <div id="clock"><i class="wi wi-day-cloudy"></i></div> -->
+        </div>
+        <div id="weather-date"></div>
+    </div>
 </body>
 </html>
+
+<!-- https://erikflowers.github.io/weather-icons/ -->

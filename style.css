@@ -1,0 +1,156 @@
+  html {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 30);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 100px repeat(9, 1fr);
+    grid-template-rows: 60px repeat(10, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    color: rgb(180, 180, 180);
+  }
+
+  #weather-nav {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 50);
+    border-radius: 10px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(60, 60, 70);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #weather-search {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 50);;
+    border-radius: 10px;
+    grid-column: 2 / 8;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #weather-search > input {
+    border: none;
+    outline: none;
+    width: 90%;
+    border-radius: 5px;
+    background-color: rgb(150, 150, 160);
+  }
+
+  #weather-search > input::placeholder {
+    color: rgb(230, 230, 230);
+  }
+
+  #weather-location {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 8;
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template-areas:
+    "countryLocation ilustrationLocation"
+    "temperatureLocation ilustrationLocation";
+    align-items: center;
+    /* justify-items: center; */
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .country-location {
+    grid-area: countryLocation;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .temperature-location {
+    grid-area: temperatureLocation;
+  }
+
+  .ilustration-location {
+    grid-area: ilustrationLocation;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #weather-location > div {
+    margin: 20px;
+  }
+
+  #weather-data {
+    grid-column: 2 / 8;
+    grid-row: 5 / 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 50);;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 
+    "date date"
+    "temperature windspeed"
+    "precipProb conditions";
+    align-items: center;
+    justify-items: center;
+  }
+
+  #date {
+    grid-area: date;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #temperature {
+    grid-area: temperature;
+  }
+
+  #windspeed {
+    grid-area: windspeed;
+  }
+
+  #precipProb {
+    grid-area: precipProb;
+  }
+
+  #conditions {
+    grid-area: conditions;
+  }
+
+  #weather-date {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 50);;
+    border-radius: 10px;
+    grid-column: 8 / 11;
+    grid-row: 2 / 10;
+  }
